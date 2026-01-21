@@ -303,7 +303,7 @@ def retrieve(
     return out
 
 def answer_with_mistral(question: str, retrieved: List[Dict[str, Any]]) -> str:
-    api_key = os.getenv("MISTRAL_API_KEY") or "olQ2PKNLmNgWAGEIUL8LMtwuPhEqu6JL"
+    api_key = os.getenv("MISTRAL_API_KEY")
     if not api_key:
         return "⚠️ لم يتم العثور على مفتاح Mistral. ضع MISTRAL_API_KEY في Environment."
 
